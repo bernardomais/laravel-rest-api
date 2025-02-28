@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Testamento extends Model
 {
-    //
+    protected $fillable = [ 'nome' ];
 }
