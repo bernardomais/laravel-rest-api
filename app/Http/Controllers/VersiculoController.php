@@ -26,17 +26,17 @@ class VersiculoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(int $id)
+    public function show(int $versiculo)
     {
-        return Versiculo::findOrFail($id);
+        return Versiculo::findOrFail($versiculo);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, int $id)
+    public function update(Request $request, int $versiculo)
     {
-        $versiculo = Versiculo::findOrFail($id);
+        $versiculo = Versiculo::findOrFail($versiculo);
 
         $versiculo->update($request->all());
 
@@ -46,8 +46,8 @@ class VersiculoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(int $id)
+    public function destroy(int $versiculo)
     {
-        return Versiculo::destroy($id);
+        return Versiculo::destroy($versiculo);
     }
 }

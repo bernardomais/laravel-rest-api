@@ -26,17 +26,17 @@ class TestamentoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(int $testamento)
     {
-        return Testamento::findOrFail($id);
+        return Testamento::findOrFail($testamento);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, int $testamento)
     {
-        $testamento = Testamento::findOrFail($id);
+        $testamento = Testamento::findOrFail($testamento);
 
         $testamento->update($request->all());
 
@@ -46,8 +46,8 @@ class TestamentoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(int $id)
+    public function destroy(int $testamento)
     {
-        return Testamento::destroy($id);
+        return Testamento::destroy($testamento);
     }
 }
