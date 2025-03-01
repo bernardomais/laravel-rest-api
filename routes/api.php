@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TestamentoController;
 use App\Http\Controllers\LivroController;
 use App\Http\Controllers\VersiculoController;
@@ -11,6 +12,8 @@ Route::apiResources([
     'livro' => LivroController::class,
     'versiculo' => VersiculoController::class,
 ]);
+
+Route::post('/register', [AuthController::class, 'register']);
 
 Route::get('/user', function (Request $request) {
     return $request->user();
