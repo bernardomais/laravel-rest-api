@@ -42,7 +42,7 @@ class LivroController extends Controller
         }
 
         return response()->json([
-            'message' => 'Erro ao pesquisar: livro não encontrado.'
+            'message' => 'Livro não encontrado.'
         ], 404);
     }
 
@@ -59,7 +59,7 @@ class LivroController extends Controller
         }
 
         return response()->json([
-            'message' => 'Erro ao atualizar: livro não encontrado.'
+            'message' => 'Livro não encontrado.'
         ], 404);
     }
 
